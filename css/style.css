@@ -717,6 +717,9 @@ footer {
 	#main-nav .btn {
 		margin: .5rem 0;
 	}
+	#main-nav .nav-link:after {
+		display: none!important;
+	}
 	.offcanvas-collapse {
 		position: fixed;
 		top: 96px;
