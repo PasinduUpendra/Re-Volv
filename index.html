@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/vienna_logo_only.png">
+    <link rel="icon" href="">
 
     <title>Re-Volv</title>
 
@@ -52,18 +52,23 @@
     </nav>
     <main role="main" class="container-fluid">
       <div class="container-fluid" id="top-section">
+        <div class="overlay"></div>
+        <video playsinline autoplay muted loop>
+          <source src="img/Banner_video.webm" type="video/webm">
+          <source src="img/Banner_video.mp4" type="video/mp4">
+        </video>
         <div class="row text-center">
           <div class="col hero-text align-self-end">
-            <h1 class="text-light">Help <span class="fw-700">Synagogues</span> Go Solar</h1>
-            <div class="scroll-section">
-              <div class="scroll-icon">
-                <img class="scroll-arrow bouncing" src="img/scroll-icon.png">
-              </div>
-            </div>
+            <h1 class="text-light">Help <span class="txt-rotate fw-700" data-period="2000" data-rotate='[ "Nonprofits", "Schools", "Hospitals", "Shelters", "Churches", "Synagogues", "Food Banks", "VFWs" ]'></span> Go Solar</h1>
           </div>
         </div>
       </div>
       <div class="container-fluid" id="second-section">
+        <div class="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="img/scroll-icon.png">
+          </div>
+        </div>
         <div class="row justify-content-center align-items-center h-75">
           <div class="col-sm-12 col-md-10 col-lg-8 text-center">
             <h2 class="purple-text fw-300 mb-5">There are roughly 1.5 million nonprofits in the United States that face major barriers to getting their solar projects financed. <span class="fw-700">You can change that.</span></h2>
@@ -328,7 +333,18 @@
                         <a class="btn btn-orange btn-me btn-arrow-white my-2" href="#" role="button">DONATE</a>
                       </div>
                       <div class="tab-pane" id="tabs-monthly" role="tabpanel">
-                        <p>Monthly Panel</p>
+                        <h5 class="blue-text fw-700">Enter an amount to give per month</h5>
+                        <div class="input-group input-group-lg">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                          </div>
+                          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                          <div class="input-group-append">
+                            <span class="input-group-text">USD/month</span>
+                          </div>
+                        </div>
+                        <p class="my-4">> Give in honor of someone</p>
+                        <a class="btn btn-orange btn-me btn-arrow-white my-2" href="#" role="button">DONATE MONTHLY</a>
                       </div>
                     </div>
                 </div>
