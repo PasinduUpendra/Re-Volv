@@ -84,4 +84,11 @@ $(document).ready(function(){
 	    $('.navbar').addClass('top-nav');
 	  }
 	});
+  $(function () {
+  'use strict'
+	  $('[data-toggle="offcanvas"]').on('click', function () {
+	  	$(this).toggleClass('is-active')
+	    $('.offcanvas-collapse').toggleClass('open')
+	  })
+	})
 });
