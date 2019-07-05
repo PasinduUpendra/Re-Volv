@@ -73,6 +73,12 @@ $(document).ready(function(){
     // instead of a settings object
   ]
   });
+  $(function () {
+  'use strict'
+    $('[data-toggle="offcanvas"]').on('click', function () {
+      $('#navbar-section').toggleClass('active-dark')
+    })
+  })
   $(window).scroll(function () {
 	  if ($(window).scrollTop() > 75) {
 	  	$('.navbar').removeClass('top-nav');
@@ -147,5 +153,5 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #fff }";
   document.body.appendChild(css);
 };
-
+const player = new Plyr('#ambassador-player');
 });
