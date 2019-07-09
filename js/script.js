@@ -73,6 +73,45 @@ $(document).ready(function(){
     // instead of a settings object
   ]
   });
+  $('.nonprofit-app-slick').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.nonprofit-app-slick-nav'
+  });
+  $('.nonprofit-app-slick-nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.nonprofit-app-slick',
+    dots: false,
+    focusOnSelect: true,
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+  });
   $(function () {
   'use strict'
     $('[data-toggle="offcanvas"]').on('click', function () {
@@ -138,20 +177,28 @@ TxtRotate.prototype.tick = function() {
   }, delta);
 };
 
-window.onload = function() {
-  var elements = document.getElementsByClassName('txt-rotate');
-  for (var i=0; i<elements.length; i++) {
-    var toRotate = elements[i].getAttribute('data-rotate');
-    var period = elements[i].getAttribute('data-period');
-    if (toRotate) {
-      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+  window.onload = function() {
+    var elements = document.getElementsByClassName('txt-rotate');
+    for (var i=0; i<elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-rotate');
+      var period = elements[i].getAttribute('data-period');
+      if (toRotate) {
+        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+      }
     }
-  }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #fff }";
-  document.body.appendChild(css);
-};
-const player = new Plyr('#ambassador-player');
+    // INJECT CSS
+    var css = document.createElement("style");
+    css.type = "text/css";
+    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #fff }";
+    document.body.appendChild(css);
+  };
+
+  const players = Plyr.setup('.plyr-video', {
+    resetOnEnd: true
+  });
+  window.players = players;
+  $('.nonprofit-app-slick').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    var current = $(slick.$slides[currentSlide]);
+      players.stop();
+  });
 });
