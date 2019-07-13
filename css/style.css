@@ -1189,6 +1189,49 @@ footer {
     background-color: #f5f8fc;
     background-image: url(../img/bg-overlay.png);
 }
+
+/* Education Center Resource */
+#top-section-min .row {
+	height: 500px;
+	z-index: 2;
+	position: relative;
+}
+.edu-cen-re-header {
+	background: url(../img/education-center-header.png);
+}
+#edu-cen-re-section-two {
+    padding-top: 5%;
+}
+#edu-cen-re-section-three {
+	padding-bottom: 5%;
+}
+#edu-cen-re-section-four {
+    background: url(../img/about_section-3-bg.png);
+    padding: 4% 2%;
+    background-size: cover;
+}
+.related-content-col {
+    box-shadow: 0px 45px 47.52px 6.48px rgba(21, 50, 97, 0.1);
+    margin: 0 .5em;
+    transition: all 300ms ease-in;
+    -webkit-transition: all 300ms ease-in;
+}
+.related-content-col-inner {
+    padding: 2em;
+}
+.related-content-col:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    box-shadow: 0px 45px 47.52px 6.48px rgba(21, 50, 97, 0.3);
+}
+#related-section {
+    padding: 5% 0;
+}
+#edu-cen-re-section-five {
+    background: url(../img/newsletter_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 /* Extra small devices (portrait phones, less than 576px) */
 
 @media (max-width: 575.98px) {
@@ -1197,6 +1240,9 @@ footer {
 	}
 	h2 {
 		font-size: 1.8rem;
+	}
+	.btn {
+	    margin-bottom: 1em;
 	}
 	.btn-lg {
 		font-size: 15px;
@@ -1359,6 +1405,17 @@ footer {
 	#application-section-second {
     	padding: 20% 0;
     }
+    #edu-cen-re-section-four {
+	    background: url(../img/about_section-3-mobile-bg.png);
+	    padding-top: 375px;
+	    background-size: cover;
+	}
+	.related-content-col {
+	    margin: 6% 0;
+	}
+	#edu-cen-re-section-five .text-right {
+	    text-align: center !important;
+	}
 }
 /* Small devices (landscape phones, less than 768px) */
 
