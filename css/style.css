@@ -154,6 +154,16 @@ input[type="color"]:focus,
 	border-color: #100084;
 	background: #fff;
 }
+.btn-grey {
+	background: #dbdbdb;
+	color: #fff;
+	border-color: #dbdbdb;
+}
+.btn-grey:hover {
+	background: #04030c;
+	color: #fff;
+	border-color: #04030c;
+}
 .btn-arrow-white,
 .btn-arrow-orange {
 	padding-right: 4.5em;
@@ -238,6 +248,28 @@ input[type="color"]:focus,
     background: transparent;
     top: -4px;
     left: 50%;
+    border: 3px solid #ff8a00;
+    margin-left: -30px;
+}
+.line-left {
+    position: absolute;
+    height: 2px;
+    width: 300%;
+    background: #f1f2f3;
+    display: block;
+    right: -100%;
+    left: -100%;
+    top: -6px;
+    border: 2px solid #fcfcfd;
+}
+.line-left:before {
+	position: absolute;
+    content: '';
+    height: 8px;
+    width: 60px;
+    background: transparent;
+    top: -4px;
+    left: 42%;
     border: 3px solid #ff8a00;
     margin-left: -30px;
 }
@@ -499,9 +531,12 @@ footer {
 /**** Home ****/
 
 #top-section {
-	background-position: center;
+	background-position: bottom center !important;
 	position: relative;
     overflow: hidden;
+}
+#top-section-min {
+	background-position: bottom center !important;
 }
 #top-section video {
   position: absolute;
@@ -634,12 +669,9 @@ footer {
 	margin: 0;
 }
 .campaign-col .img-container img {
-	position: absolute;
-	display: block;
-	top: 0;
-	left: -10%;
-	min-width: 120%;
-	height: auto;
+	height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .campaign-col .campaign-text {
 	padding: 0em 1em 2em 1em;
@@ -960,7 +992,7 @@ footer {
 .about-six-row-f {
     margin-bottom: -70px;
 }
-#about-section-seven {
+#share-section {
 	background: url(../img/section_4_bg.png);
 	padding: 5% 0;
 }
@@ -1232,6 +1264,304 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* Monthly Donate */
+.monthly-donate-header {
+	background: url(../img/monthly-donate-header.png);
+}
+#monthly-donate-section-two {
+    padding: 5% 0;
+}
+#monthly-donate-section-two .donate-tabs, #monthly-donate-section-five .donate-tabs{
+	box-shadow: 0px 23px 38px 0px rgba(20, 86, 121, 0.05);
+	max-width: 80%;
+}
+.clean-enrgy-col {
+	text-align: center;
+	cursor: pointer;
+}
+.clean-enrgy-col span {
+	width: 65px;
+	height: 65px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain; 
+	display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 1em;
+	transition: all 300ms linear;
+	-webkit-transition: all 300ms linear;
+}
+.clean-enrgy-col span:hover {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.tooltip_templates {
+    display: none;
+}
+.tooltipster-sidetip .tooltipster-box {
+    background: #fff !important;
+    border: none !important;
+    box-shadow: 0px 23px 38px 0px rgba(20, 86, 121, 0.05);
+}
+.tooltipster-box {
+    max-width: 400px;
+    border-radius: 10px !important;
+}
+.tooltipster-box .tooltipster-content {
+    padding: 0 !important;
+}
+.tooltip-body {
+	padding: 2em;
+}
+.tooltip-body p {
+	color: #7a7e93;
+	font-weight: 300;
+}
+.tooltip-1 {
+	background: url(../img/revolv-icon.png)
+}
+.tooltip-2 {
+	background: url(../img/leaf-icon.png)
+}
+.tooltip-3 {
+	background: url(../img/non-profit-icon.png)
+}
+.tooltip-1:hover {
+	background: url(../img/revolv-icon-hover.png)
+}
+.tooltip-2:hover {
+	background: url(../img/leaf-icon-hover.png)
+}
+.tooltip-3:hover {
+	background: url(../img/non-profit-icon-hover.png)
+}
+.tooltip-4 {
+	background: url(../img/exclusive-events-icon.png)
+}
+.tooltip-5 {
+	background: url(../img/inside-stories-icon.png)
+}
+.tooltip-6 {
+	background: url(../img/dollar-proof-icon.png)
+}
+#monthly-donate-section-three {
+    padding: 8% 0 2% 0;
+    background: linear-gradient(0deg, #fff 40%, #06071b 40%);
+}
+#monthly-donate-section-four {
+	background: url(../img/monthly-membership-bg.png);
+	padding: 120px 0;
+}
+#monthly-donate-section-five {
+	padding: 5% 0;
+}
+#monthly-donate-section-six {
+	background: url(../img/newsletter_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Blog */
+.blog-header {
+	background: url(../img/blog-header.png);
+}
+#blog-body {
+	padding: 5% 0;
+}
+.blog-thumb-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+.blog-thumb-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.meta-date {
+    color: #5d5d5d;
+    font-weight: bold;
+    font-size: .8em;
+}
+.meta-title {
+    font-size: 1em;
+    font-weight: 300;
+    color: #ff8a00;
+}
+.blog-excerpt-wrapper p {
+    color: #7d8a91;
+}
+.blog-post-inner {
+    box-shadow: 0px 45px 47.52px 6.48px rgba(21, 50, 97, 0.1);
+}
+.blog-excerpt-wrapper {
+    padding: 1em;
+}
+.blog-posts-col {
+    margin-bottom: 3em;
+}
+#newsletter-section {
+	background: url(../img/newsletter_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Blog Article */
+#article-body {
+	padding: 5% 0;
+}
+#article-body p {
+	color: #7d8a91;
+	font-weight: 300;
+}
+#article-body img{
+	float: left;
+}
+.recent-posts {
+	padding: 5% 0;
+}
+
+/* Campaign */
+.donate-icon-col {
+    background: #ff8a00;
+    border-radius: 15px;
+    box-shadow: 0px 23px 38px 0px rgba(20, 86, 121, 0.05);
+    padding: 1em;
+}
+.donate-icon-col a {
+	color: #fff;
+}
+.donate-icon-wrapper {
+    width: 30%;
+    float: left;
+}
+.donate-txt-wrapper {
+    text-align: center;
+}
+.donate-txt-wrapper h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.8em;
+    margin-bottom: 0;
+}
+.donate-txt-wrapper h5 {
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.donate-icon-wrapper img {
+    margin-top: 0.6em;
+}
+.updates-col {
+	margin: 10% 0;
+    padding: 1em;
+    overflow: hidden;
+    box-shadow: 0px 23px 38px 0px rgba(20, 86, 121, 0.1);
+    border-radius: 15px;
+}
+.updates-inner-col {
+	margin: 5% 0;
+	color: #7d8a91;
+}
+.updates-inner-col .meta-date {
+	color: #7d8a91;
+}
+.updates-inner-col img{
+	margin: 1em 0;
+}
+#campaign-body {
+    padding: 5% 0;
+    color: #7d8a91;
+    background-image: url(../img/bg-overlay.png);
+    background-color: #fafbfc;
+}
+/* Fundraise Personalized */
+.fundraise-header-title {
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 350px;
+}
+.fundraise-user {
+    float: left;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 225px;
+    width: 225px;
+    border: 12px solid #fff;
+    margin-right: 2em;
+}
+.fundraise-user img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.campaign-col .title-container {
+    background: #140869;
+    color: #fff;
+    padding: 1.5em 0;
+    margin-bottom: 1.5em;
+}
+.campaign-col .title-container h1 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.campaign-col .title-container sup {
+    font-size: 60%;
+    top: -0.7em;
+    right: -10px;
+}
+.campaign-col .title-container small {
+    font-size: 60%;
+    font-weight: bold;
+}
+#fundraise-body {
+	padding-top: 8%;
+	padding-bottom: 5%;
+	color: #7d8a91;
+    background-image: url(../img/bg-overlay.png);
+    background-color: #fafbfc;
+}
+.tips-col {
+	margin: 10% 0;
+    padding: 1em;
+    overflow: hidden;
+    box-shadow: 0px 23px 38px 0px rgba(20, 86, 121, 0.1);
+    border-radius: 15px;
+}
+.tips-list {
+    padding: .5em;
+}
+.tips-list li {
+    list-style: none;
+    padding: .5em 0;
+}
+.tips-list li a {
+    color: #7d8a91;
+    font-weight: 600;
+}
+.tips-list li a:hover {
+	color: #ff8a00;
+}
+.line-list li {
+    list-style: none;
+    padding-left: 1em;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    position: relative;
+}
+.line-list li:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    height: 1px;
+    width: 8px;
+    background: #ff8a00;
+    top: 49%;
+}
 /* Extra small devices (portrait phones, less than 576px) */
 
 @media (max-width: 575.98px) {
@@ -1253,6 +1583,12 @@ footer {
 		height: 12px;
 		background-size: contain;
 		top: 20px;
+	}
+	.input-group-append .btn {
+	    margin-bottom: 0;
+	}
+	#scroll-section {
+		margin-bottom: 0;
 	}
 	#second-section {
 		margin: 15vh 0;
@@ -1415,6 +1751,25 @@ footer {
 	}
 	#edu-cen-re-section-five .text-right {
 	    text-align: center !important;
+	}
+	#monthly-donate-section-two .donate-tabs, #monthly-donate-section-five .donate-tabs{
+		max-width: 100%;
+	}
+	#fundraise-body {
+	    margin-top: 100px;
+	}
+	.fundraise-header-title {
+	    margin-top: 150px;
+	    text-align: center;
+	}
+	.fundraise-header-title h1 {
+	    font-size: 2em;
+	}
+	.fundraise-user {
+	    height: 175px;
+	    width: 175px;
+	    margin: 0 auto;
+	    float: unset;
 	}
 }
 /* Small devices (landscape phones, less than 768px) */

@@ -112,6 +112,15 @@ $(document).ready(function(){
     }
   ]
   });
+  $('.clean-enrgy-col').tooltipster({
+      animation: 'fade',
+      side: 'bottom',
+      arrow: false,
+      trigger: 'click',
+      interactive: true,
+      contentAsHTML: true,
+      theme: 'tooltipster-shadow'
+   });
   $(function () {
   'use strict'
     $('[data-toggle="offcanvas"]').on('click', function () {
